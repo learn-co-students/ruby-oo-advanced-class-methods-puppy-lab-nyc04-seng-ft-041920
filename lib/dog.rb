@@ -7,8 +7,6 @@ class Dog
     def initialize(name)
         @name = name
         save
-
-    
     end
 
     def self.all #class method
@@ -20,14 +18,17 @@ class Dog
     end
 
     def self.print_all #class method
-        puts @@all.map {|x| x.name }
+        puts @@all.map {|each| each.name }
     end
+
+  
 
     def save #instance method
         @@all << self
     end
 
-    def self.clear_all #class method
+    def clear_all #class method
         @all.clear
     end
+   
 end
