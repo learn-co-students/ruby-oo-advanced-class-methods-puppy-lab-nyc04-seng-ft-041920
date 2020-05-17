@@ -2,7 +2,7 @@
 class Dog
     attr_accessor :name ##getter method, setter method, instance variables
 
-    @@all = []
+    @@all = [] #class variable
 
     def initialize(name)
         @name = name
@@ -27,7 +27,7 @@ class Dog
         @@all << self
     end
 
-    def clear_all
+    def self.clear_all #class method
         @all.clear
     end
 end
